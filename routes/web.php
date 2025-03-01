@@ -47,3 +47,10 @@ $router->post('/cart/update', 'shop/CartController@update');
 $router->get('/cart/remove/{id}', 'shop/CartController@remove');
 $router->get('/cart/clear', 'shop/CartController@clear');
 $router->post('/cart/apply-coupon', 'shop/CartController@applyCoupon');
+
+// Blog routes
+$router->get('/blog', 'blog/BlogController@index');
+$router->get('/blog/category/{id}', 'blog/BlogController@index');
+$router->get('/blog/{id}', 'blog/BlogController@show');
+$router->post('/blog/comment', 'blog/BlogController@addComment');
+$router->get('/blog/search', 'blog/BlogController@search');

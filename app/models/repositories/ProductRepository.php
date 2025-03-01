@@ -75,6 +75,39 @@ class ProductRepository
         $this->db = DatabaseHelper::getInstance()->getConnection();
     }
     
+    // public function getAll($categoryId = null)
+    // {
+    //     $sql = "SELECT p.*, c.name as category_name 
+    //             FROM products p
+    //             JOIN categories c ON p.category_id = c.id
+    //             WHERE 1=1";
+        
+    //     $params = [];
+        
+    //     if ($categoryId) {
+    //         $sql .= " AND p.category_id = ?";
+    //         $params[] = $categoryId;
+    //     }
+        
+    //     $sql .= " ORDER BY p.created_at DESC";
+        
+    //     $stmt = $this->db->prepare($sql);
+        
+    //     if (!empty($params)) {
+    //         $types = str_repeat('i', count($params));
+    //         $stmt->bind_param($types, ...$params);
+    //     }
+        
+    //     $stmt->execute();
+    //     $result = $stmt->get_result();
+        
+    //     $products = [];
+    //     while ($row = $result->fetch_assoc()) {
+    //         $products[] = $row;
+    //     }
+        
+    //     return $products;
+    // }
     public function getAll($categoryId = null)
     {
         $sql = "SELECT p.*, c.name as category_name 
