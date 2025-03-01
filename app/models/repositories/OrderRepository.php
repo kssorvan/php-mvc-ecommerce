@@ -1,6 +1,4 @@
 <?php\n// \app\models\repositories\OrderRepository.php\n\n?>
-<<<<<<< Updated upstream
-=======
 <?php
 // app/models/repositories/OrderRepository.php
 
@@ -121,4 +119,3 @@ class OrderRepository
         return $stmt->execute();
     }
 }
->>>>>>> Stashed changes
